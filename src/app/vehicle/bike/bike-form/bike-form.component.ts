@@ -7,7 +7,7 @@ import { Ibike } from '../ibike';
   styleUrls: ['./bike-form.component.css']
 })
 export class BikeFormComponent implements OnInit {
-  @Output() bikevar = new EventEmitter;
+  @Output() bikevar = new EventEmitter();
   public wheels;
   public seats;
   bike:Array<Ibike>=[];
@@ -28,7 +28,5 @@ export class BikeFormComponent implements OnInit {
 
 }
   
-  anothermethod(event){
-    console.log(event,"inside parent");
-  }
+  
 }
