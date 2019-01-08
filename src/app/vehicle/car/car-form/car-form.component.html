@@ -1,0 +1,6 @@
+<form>
+    wheels:<input type="text" name="wheels" [(ngModel)]="wheels" ><br/>
+    seats:<input type="text"name="seats" [(ngModel)]="seats"><br/>
+    <button type="submit" (click)="onclick()">submit</button>
+</form>
+<app-car-table [carArray]="car"></app-car-table>

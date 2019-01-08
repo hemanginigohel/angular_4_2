@@ -1,0 +1,8 @@
+<app-bike-form (bikevar)="ondbclick($event)"></app-bike-form>
+<table>
+  <tr *ngFor="let demo of bikedata">
+    <td>{{demo.wheels}}</td>
+    <td>{{demo.seats}}</td>
+  </tr>
+</table>
+
