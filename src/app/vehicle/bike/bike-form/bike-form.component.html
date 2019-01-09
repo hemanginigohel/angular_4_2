@@ -1,8 +1,8 @@
 <hr>
 <form>
-  wheels:<input type="text" name="wheels" [(ngModel)]="wheels" ><br/>
-  seats:<input type="text"name="seats" [(ngModel)]="seats"><br/>
+  wheels:<input type="text" name="wheels" [(ngModel)]="obj1.wheels" ><br/>
+  seats:<input type="text"name="seats" [(ngModel)]="obj1.seats"><br/>
   <button type="submit" (click)="onclick()">submit</button>
 </form>
-<hr>
-<app-child [bikearray]="bike"></app-child>
+
+<!-- <app-child [bikevar]="bike"></app-child>  -->

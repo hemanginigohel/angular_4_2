@@ -1,4 +1,4 @@
-import { Component, OnInit ,Output,EventEmitter} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Ibike } from '../ibike';
 
 @Component({
@@ -8,25 +8,29 @@ import { Ibike } from '../ibike';
 })
 export class BikeFormComponent implements OnInit {
   @Output() bikevar = new EventEmitter();
-  public wheels;
-  public seats;
-  bike:Array<Ibike>=[];
+  binterface: Ibike;
+  obj1: Ibike = {
+
+    wheels: null,
+    seats: null
+
+  };
+
   constructor() { }
 
   ngOnInit() {
   }
-  onclick():Ibike{
-    let obj1:Ibike={
-
-      wheels:this.wheels,
-      seats:this.seats
+  onclick(): void {
+    // this.bike.push(obj1);
+    // console.log(obj1);
+    // this.bikevar.emit(this.bike);
+    // return obj1;
+    this.binterface = {
+      wheels: this.obj1.wheels,
+      seats: this.obj1.seats
     }
-    this.bike.push(obj1);
-    console.log(obj1);
-    this.bikevar.emit(this.bike);
-    return obj1;
+    this.bikevar.emit(this.binterface);
+  }
 
-}
-  
-  
+
 }

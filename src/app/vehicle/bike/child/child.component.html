@@ -1,8 +1,10 @@
-<table>
-<hr>
+--------------------child table:
+<div >
+<table [ngStyle]="{'border':'2px solid black'}">
   <tr *ngFor="let arr of bike">
-      <th>{{arr.wheels}}</th>
-      <th>{{arr.seats}}</th>
+    <th>{{arr.wheels}}</th>
+    <th>{{arr.seats}}</th>
   </tr>
-    <hr/>
 </table>
+</div>
+------------------------

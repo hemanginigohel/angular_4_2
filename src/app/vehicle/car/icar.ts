@@ -1,4 +1,4 @@
 export interface Icar {
-    wheels:number;
-    seats:number;
+    cwheels:number;
+    cseats:number;
 }

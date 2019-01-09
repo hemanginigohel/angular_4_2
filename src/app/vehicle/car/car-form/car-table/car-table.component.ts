@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges} from '@angular/core';
 import { Icar } from '../../icar';
 
 @Component({
@@ -7,11 +7,21 @@ import { Icar } from '../../icar';
   styleUrls: ['./car-table.component.css']
 })
 export class CarTableComponent implements OnInit {
-@Input('carArray') car:Array<Icar>;
+  car:Array<Icar>=[];
+@Input('cinterface') cinterface:Icar;
   
   constructor() { }
-
   ngOnInit() {
   }
+  ngOnChanges(changes: SimpleChanges): void{
+    console.log(changes);
+    if(changes && changes.cinterface && changes.cinterface.firstChange == false){
+      this.car.push(this.cinterface);
+      console.log(this.car);
+    }
+    else{
+      console.log("abc");
+    }
+}
 
 }
